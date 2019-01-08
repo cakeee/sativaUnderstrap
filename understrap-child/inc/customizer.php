@@ -9,7 +9,7 @@
        ));
 
        $wp_customize->add_setting('homepage_image', array(
-            'default' => trailingslashit( get_template_directory_uri() . 'inc/img/homepage_header.jpg'),
+            'default' => get_stylesheet_directory_uri() . '/inc/img/homepage_header.jpg',
             'type' => 'theme_mod'
 
        ));

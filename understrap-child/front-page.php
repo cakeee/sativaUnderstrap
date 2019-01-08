@@ -1,5 +1,9 @@
 <?php get_header('sativa'); ?>
-
+<style>
+.bg-image {
+    background-image: url(<?php echo get_theme_mod('homepage_image'); ?>);
+}
+</style>
 <div class="bg-image home d-sm-none"></div>
 <main class="bg-image home">
 

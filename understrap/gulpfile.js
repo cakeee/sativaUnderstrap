@@ -1,3 +1,9 @@
+//Browsersync options
+var browserSyncOptions = {
+    proxy: "http://localhost:8888/sativawp/", // <----- CHANGE HERE
+    notify: false
+};
+
 // Defining requirements
 var gulp = require( 'gulp' );
 var plumber = require( 'gulp-plumber' );
@@ -17,11 +23,7 @@ var gulpSequence = require( 'gulp-sequence' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
 
-//Browsersync options
-var browserSyncOptions = {
-    proxy: "http://localhost:8888/sativawp/", // <----- CHANGE HERE
-    notify: false
-};
+
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
