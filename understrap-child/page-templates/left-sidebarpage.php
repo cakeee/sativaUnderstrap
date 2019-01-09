@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Left and Right Sidebar Layout
+ * Template Name: Left Sidebar Layout
  *
  * This template can be used to override the default template and sidebar setup
  *
@@ -24,11 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
 
 			<div
-				class="<?php
-					if ( is_active_sidebar( 'left-sidebar' ) xor is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-8<?php
-					elseif ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-4<?php
-					else : ?>col-md-12<?php
-					endif; ?> content-area"
+				class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
 				id="primary">
 
 				<main class="site-main" id="main" role="main">
@@ -50,12 +46,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div><!-- #primary -->
 
-			<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
-
 		</div><!-- .row -->
 
-	</div><!-- #content -->
+	</div><!-- Container end -->
 
-</div><!-- page-wrapper -->
+</div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
