@@ -1321,7 +1321,10 @@ h2#wp-optimize-nav-tab-wrapper a.nav-tab.wp-optimize-nav-tab__back .dashicons, h
 				        user-select: none;
 			}
 
-.wpo_unused_image .wpo_unused_image__input:checked + label, .wpo_smush_image .wpo_unused_image__input:checked + label {
+.wpo_unused_image .wpo_unused_image__input:checked + label,
+	.wpo_unused_image.checked label,
+	.wpo_smush_image .wpo_unused_image__input:checked + label,
+	.wpo_smush_image.checked label {
 		border-color: #0272AA;
 }
 

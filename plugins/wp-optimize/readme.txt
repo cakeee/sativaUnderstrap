@@ -4,7 +4,7 @@ Donate link: https://david.dw-perspective.org.uk/donate
 Tags: comments, spam, optimize, database, revisions, users, posts, trash, schedule, automatic, clean, phpmyadmin, meta, postmeta, responsive, mobile
 Requires at least: 3.8
 Tested up to: 5.0
-Stable tag: 2.2.9
+Stable tag: 2.2.10
 License: GPLv2+
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -143,6 +143,14 @@ Please check your database for corrupted tables. That can happen, usually your w
 
 == Changelog ==
 
+= 2.2.10 - 11/Jan/2019 =
+
+* FEATURE: Added the ability to download unused images list (Premium version) as a CSV file
+* FIX: Load scripts and styles only on WP-Optimize pages
+* FIX: Fix a possible fatal error due to missing get_plugins() function
+* TWEAK: Remember selected optimizations on Database page
+* TWEAK: Prevent PHP notices when saving settings or optimizing in some circumstances
+
 = 2.2.9 - 03/Jan/2019 =
 
 * FIX: Change a newly-introduced fragment that was not compatible with PHP 5.2
@@ -151,6 +159,7 @@ Please check your database for corrupted tables. That can happen, usually your w
 = 2.2.7 - 31/December/2018 =
 
 * RE-FACTOR: Refactoring and reorganisation of the UI
+* TWEAK: Added feature to view unused images as list
 * TWEAK: Fix sorting sizes columns in Tables information to take into account textual modifiers
 * FIX: MetaSlider images detected as unused
 * FIX: Preview for Trashed posts optimization doesn't work
@@ -452,4 +461,4 @@ Please check your database for corrupted tables. That can happen, usually your w
 * Fix Interface
 
 == Upgrade Notice ==
-* 2.2.9 : Fix issues when running on PHP 5.2
+* 2.2.10 : Fix a few annoyances/errors on some installs. A recommended update for all.

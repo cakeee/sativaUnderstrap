@@ -29,7 +29,7 @@ class WP_Optimization_orphanedtables extends WP_Optimization {
 		if (isset($this->data['optimization_table']) && '' != $this->data['optimization_table']) {
 			$table = $this->optimizer->get_table($this->data['optimization_table']);
 
-			$result = $this->delete_table($table);
+			$result = (false === $table) ? false : $this->delete_table($table);
 
 			$this->register_meta('success', $result);
 		} else {

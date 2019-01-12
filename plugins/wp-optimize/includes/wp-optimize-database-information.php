@@ -494,6 +494,9 @@ class WP_Optimize_Database_Information {
 		if (is_array($installed_plugins)) return $installed_plugins;
 
 		$installed_plugins = array();
+		
+		if (!function_exists('get_plugins')) include_once(ABSPATH.'wp-admin/includes/plugin.php');
+		
 		$plugins = get_plugins();
 
 		foreach ($plugins as $plugin_file => $plugin_data) {
