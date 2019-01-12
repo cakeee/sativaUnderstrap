@@ -58,20 +58,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<nav class="navbar navbar-expand-lg bg-seal-blue">
             
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
     </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-        
-
-
-		<!-- The WordPress Menu goes here -->
+    
+	<!-- The WordPress Menu goes here -->
 		<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav ml-auto',
+						'container_id'    => 'mainNav',
+						'menu_class'      => 'nav text-white list-unstyled navbar-nav pl-4',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
