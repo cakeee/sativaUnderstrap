@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Full Width Page
+ * Template Name: Full Width Page Loop
  *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
+ * Template for displaying a page without sidebar even if a sidebar widget is published Used for loops.
  *
  * @package understrap
  */
@@ -32,7 +32,7 @@ $featuredImage_pre_loop = wp_get_attachment_image_src( get_post_thumbnail_id( $p
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+						<?php get_template_part( 'loop-templates/content', 'loop' ); ?>
 
 						<?php
 						// If comments are open or we have at least one comment, load up the comment template.
