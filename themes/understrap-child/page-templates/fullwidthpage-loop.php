@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 $featuredImage_pre_loop = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 ?>
 <?php	if(has_post_thumbnail()) { ?>
-			<div class="bg-image" style="background-image: url(<?php  echo $featuredImage_pre_loop; ?>);"></div>
+			<div class="bg-image" style="background-image: url(<?php  echo $featuredImage_pre_loop[0]; ?>);"></div>
 <?php } ?>
 
 <div id="full-width-page-wrapper">
@@ -53,4 +53,4 @@ $featuredImage_pre_loop = wp_get_attachment_image_src( get_post_thumbnail_id( $p
 
 </div><!-- #full-width-page-wrapper -->
 
-<?php get_footer(); ?>
+<?php get_footer('sativa'); ?>

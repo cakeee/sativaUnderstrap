@@ -27,14 +27,32 @@ body {
 .color-hr {
     border-top: 3px solid #109bd7 !important;
 }
-.active {
+
+/* Navigation Styles */
+ul>li.active > a.nav-link {
     display: block;
     color: #27367b;
     padding: 0.5rem 0;
 }
-ul.text-white>li.nav-item>a.nav-link:hover {
+ul#main-menu>li.menu-item {
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+ul>li>a.nav-link{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: inherit;
+    line-height: 1.2;
+   
+}
+
+ul>li.nav-item>a.nav-link:hover {
     color: #27367b !important;
 }
+
+
+/* Front-Page */
 .news {
     overflow-y: scroll;
 }

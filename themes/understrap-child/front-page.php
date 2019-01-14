@@ -1,4 +1,9 @@
-<?php get_header('sativa'); ?>
+<?php 
+
+global $post;  
+get_header('sativa'); 
+
+?>
 <style>
 .bg-image {
     background-image: url(<?php echo get_theme_mod('homepage_image'); ?>);
@@ -13,16 +18,46 @@
 				
 			<div class="col-md-6 p-2 p-sm-5 m-4 m-md-0">
 				
-					<h1 class="font-weight-bold text-white text-center mt-md-4 mb-3 pb-md-4">News &amp; Updates</h1>
+					<h1 class="font-weight-bold text-white text-center mt-md-4 mb-3 pb-md-4"><?php echo get_the_title(17); ?></h1>
 					
 					<div class="text-area-style mb-3 news">
 						
-						<div class="news-loop">
-
-						<h2 class="text-warning h5"><?php echo $title  ?></h2>
-						<h3 class="h6 text-white"> <?php  echo $update ?> </h3>
 						
-						</div>
+							<?php 
+							// WP_Query arguments
+								$args = array(
+									'post_type'              => array( 'update' ),
+									'post_status'            => array( 'publish' ),
+									'category_name' 		 => 'English',
+								);
+
+								// The Query
+								$query = new WP_Query( $args );
+
+								// The Loop
+								if ( $query->have_posts() ) {
+									while ( $query->have_posts() ) {
+										$query->the_post();
+									?>
+								<div class="news-loop">
+									<h2 class="text-warning h5"><?php the_title()  ?> <br> <span><?php the_field('update_subtitle'); ?></span></h2>
+									<h3 class="h6 text-white"> <?php  the_content(); ?></h3>
+								
+								</div>
+								
+								<?php }
+								} else {
+									// no posts found
+								}
+
+								// Restore original Post Data
+								wp_reset_postdata();
+								
+							
+							?>
+						
+						
+						
 						
 					
 					</div>
@@ -100,9 +135,9 @@
 
 			</div>
 		</div>
-	</div>     
+</div>     
 
 
 
 
-<?php get_footer();  ?>
+<?php get_footer('sativa');  ?>
