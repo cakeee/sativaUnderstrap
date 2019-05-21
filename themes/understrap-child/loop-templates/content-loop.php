@@ -12,12 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<!-- <header class="entry-header"> -->
 
-		<?php the_title( '<h1 class="font-weight-bold d-none d-md-block mb-4">', '</h1>' ); ?>
-		<?php the_title( '<h1 class="font-weight-bold d-block d-md-none text-center mb-4">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-	<hr class="color-hr">
+		<?php // the_title( '<h1 class="font-weight-bold d-none d-md-block mb-4">', '</h1>' ); ?>
+		<?php //the_title( '<h1 class="font-weight-bold d-block d-md-none text-center mb-4">', '</h1>' ); ?>
+	<!-- </header>.entry-header -->
+	<!-- <hr class="color-hr"> -->
 	
 	 <?php //echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
