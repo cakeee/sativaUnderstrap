@@ -15,9 +15,7 @@ $seal-blue:         #119BD7;
 $forest-green:      #296819;
 $footer-dark-gray:  #626C72;
 $footer-light-gray: #D6D6D5;
-$black:             #31333B;
-$info:              #17a2b8;
-$soft-grey:         #cdd5db;
+
 $primary:             $dpw-light-blue; 
 $warning:             $california-gold;
 $dark:                $dpw-dark-blue;
@@ -33,18 +31,12 @@ $theme-colors: (
  "warning-60"   : lighten($warning, 15%),
  "warning-40"   : lighten($warning, 25%),
  "warning-20"   : lighten($warning, 35%),
- "info-80"      : lighten($info, 5%),
- "info-60"      : lighten($info, 15%),
- "info-40"      : lighten($info, 25%),
- "info-20"      : lighten($info, 35%),
  "med-blue"     : $dpw-med-blue,
  "seal-blue"    : $seal-blue,
- "black"        : $black,
  "forest-green" : $forest-green,
  "footer-drk"   : $footer-dark-gray,
- "footer-lt"    : $footer-light-gray, 
- "soft-grey"    : $soft-grey
-  );
+ "footer-lt"    : $footer-light-gray
+  ); 
 
 /****
 Typography
@@ -72,9 +64,6 @@ Shadows
 ****/
 
 $enable-shadows:   true;
-
-//Responsive Font Size
-$enable-responsive-font-sizes: true;
 
 /****
 Breakpoints

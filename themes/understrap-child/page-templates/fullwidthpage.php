@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-get_header();
+get_header('sativa');
 global $post;
 $container = get_theme_mod( 'understrap_container_type' );
 $featuredImage_pre_loop = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
