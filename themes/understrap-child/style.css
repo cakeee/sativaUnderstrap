@@ -179,11 +179,11 @@ textarea.light:-moz-placeholder {
 }
 .half-half.top {
     height: 33%;
-    background-image: url('../../media/sativa-pay-bill-background.png');
+    background-image: url('inc/img/sativa-pay-bill-background.png');
 }
 .half-half.bottom {
     height: 67%;
-    background-image: url('../../media/About-Us-Flowers.jpg');
+    background-image: url('inc/img/About-Us-Flowers.jpg');
 }
 .bg-image {
     height: 450px;
@@ -194,16 +194,7 @@ textarea.light:-moz-placeholder {
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-.bg-image.community {
-    background-image: url('../../media/community-engagement.jpg');
-    background-position-y: -0.25em;
-}
-.bg-image.customer {
-    background-image: url('../../media/customer-care.jpg');
-}
-.bg-image.faq {
-    background-image: url('../../media/faqs.jpg');
-}
+
 .bg-image.home {
     height: 100%;
     /* background-image: url('../../media/Homepage-Header-1280x900.jpg'); */

@@ -23,7 +23,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="entry-content">
 
-		<?php the_content(); ?>
+	<div class="news-loop page">
+	
+	<!-- 	This outputs the post TITLE -->
+	<h3 class="text-seal-blue h4 font-weight-bold">
+		<?php the_title(); 
+		
+		if (get_field('update_subtitle')) {  ?>
+		<br><span>
+			<?php the_field('update_subtitle'); 
+		}?>
+		</span>
+	</h3>
+	<!-- <h2 class="entry-title"><a href="<?php //the_permalink(); ?>"><?php //the_title(); ?></a></h2> -->
+
+	<!-- 	This outputs the post EXCERPT.  To display full content including images and html, 
+		replace the_excerpt(); with the_content();  below. -->
+	<div class="entry-summary">
+		<?php echo do_shortcode("[ic_add_posts post_type='update']"); ?>
+	</div>
+
+	<!--	This outputs the post META information -->
+	<div class="entry-utility">
+		
+		<?php edit_post_link( __( 'Edit', 'posts-in-page' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+	</div>
+</div>
 
 		<?php
 		wp_link_pages(

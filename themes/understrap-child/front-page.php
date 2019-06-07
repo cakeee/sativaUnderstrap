@@ -62,7 +62,7 @@ get_header('sativa');
 					
 					</div>
 					
-					<a role="button" class="btn btn-warning btn-md btn-responsive" href="about.php">LEARN MORE</a>
+					<a role="button" class="btn btn-warning btn-md btn-responsive" href="/about-us"><?php echo esc_html__("LEARN MORE","understrap-child");  ?></a>
 				
 			</div>
 
@@ -83,7 +83,7 @@ get_header('sativa');
 						
 					</div>
 					
-					<a role="button" class="btn btn-warning btn-md btn-responsive" href="about-es.php">APRENDA MÁS</a>
+					<a role="button" class="btn btn-warning btn-md btn-responsive" href="/about-us">APRENDA MÁS</a>
 					
 			</div>
 
@@ -117,16 +117,16 @@ get_header('sativa');
 								
 							</div>
 							<div class="col-md-4">
-								<button type="button" class="btn btn-primary-40 btn-lg text-white font-weight-bold btn-responsive">SUBMIT/ENVIAR</button>
+								<button type="button" class="btn btn-primary-40 btn-lg text-white font-weight-bold btn-responsive"><?php echo esc_html__("SUBMIT/ENVIAR","understrap-child"); ?></button>
 							</div>
 						</div>
 					</form>
 					
 					<div class="row">
 						<div class="col-md-12 text-center pt-3 align-items-center text-white">
-							<strong>Sign Up for Savita Los Angeles County Water District News &amp; Updates</strong>
+							<?php echo "<strong>" . esc_html__("Sign Up for Savita Los Angeles County Water District News &amp; Updates","understrap-child") .  "</strong>"; ?>
 							<br>
-							Inscríbase para recibir las noticias y actualizaciones de Savita del Distrito de Agua del Condado de Los Angeles
+							<?php echo esc_html__("Inscríbase para recibir las noticias y actualizaciones de Savita del Distrito de Agua del Condado de Los Angeles","understrap-child"); ?>
 						</div>
 					</div>
 					

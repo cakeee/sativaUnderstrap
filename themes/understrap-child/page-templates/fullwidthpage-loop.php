@@ -23,13 +23,18 @@ $featuredImage_pre_loop = wp_get_attachment_image_src( get_post_thumbnail_id( $p
 <div id="full-width-page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
-
+	
 		<div class="row">
 
 			<div class="col-md-6 p-5 text-secondary content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
+				<header class="entry-header text-secondary">
 
+<?php the_title( '<h1 class="font-weight-bold d-none d-md-block mb-4">', '</h1>' ); ?>
+<?php the_title( '<h1 class="font-weight-bold d-block d-md-none text-center mb-4">', '</h1>' ); ?>
+	</header><!--.entry-header -->
+	<hr class="color-hr"> 
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php get_template_part( 'loop-templates/content', 'loop' ); ?>
